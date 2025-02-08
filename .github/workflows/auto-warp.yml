@@ -1,0 +1,41 @@
+name: Auto Change Warp IP & Scan
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Runs every hour
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  change-ip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: sudo apt update && sudo apt install -y curl jq
+
+      - name: Download & Run Warp-go
+        run: |
+          curl -L -o warp-go.sh "https://gitlab.com/fscarmen/warp/-/raw/main/warp-go.sh?ref_type=heads"
+          chmod +x warp-go.sh
+          ./warp-go.sh
+
+      - name: Get New IPv6
+        run: |
+          IP=$(curl -6 ifconfig.io || echo "No IPv6 Found")
+          echo "New IPv6: $IP"
+          echo "NEW_IP=$IP" >> $GITHUB_ENV
+
+      - name: Scan IP & Update Config
+        run: |
+          echo "Scanning IP and Updating Configuration..."
+          # Add your script for scanning and updating the configuration here
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Auto-update Warp IP: $NEW_IP" || exit 0
+          git push
