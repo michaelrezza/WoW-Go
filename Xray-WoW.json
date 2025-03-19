@@ -85,16 +85,16 @@
           "mtu": 1300,
           "peers": [
             {
-              "endpoint": "162.159.195.245:4500",
+              "endpoint": "162.159.192.222:854",
               "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
             }
           ],
           "reserved": [
-            200,
-            169,
-            156
+            121,
+            71,
+            136
           ],
-          "secretKey": "2NUhbbndMvurdJaPVNKd16TbEfzXJpAsd/WupuTr9ko=",
+          "secretKey": "QNeFh/vfFa8iNj21RtTFmb5xweKiglxKS+k9Wp0/01g=",
           "keepAlive": 10,
           "wnoise": "quic",
           "wnoisecount": "10-15",
@@ -118,16 +118,16 @@
           "mtu": 1300,
           "peers": [
             {
-              "endpoint": "162.159.192.5:4500",
+              "endpoint": "188.114.98.60:1387",
               "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
             }
           ],
           "reserved": [
-            129,
-            87,
-            14
+            221,
+            155,
+            117
           ],
-          "secretKey": "aJG6Pd3M15nsHI8AxFP1Uw9GRnIDg1E0lNTmpJYd4n8=",
+          "secretKey": "oCfcC5wxw5QQJwG0AVSYje7FQFE2oEqzGRv4GrF6Zlg=",
           "keepAlive": 10,
           "wnoise": "quic",
           "wnoisecount": "10-15",
@@ -306,16 +306,16 @@
           "mtu": 1300,
           "peers": [
             {
-              "endpoint": "162.159.195.245:4500",
+              "endpoint": "162.159.192.222:854",
               "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
             }
           ],
           "reserved": [
-            200,
-            169,
-            156
+            121,
+            71,
+            136
           ],
-          "secretKey": "2NUhbbndMvurdJaPVNKd16TbEfzXJpAsd/WupuTr9ko=",
+          "secretKey": "QNeFh/vfFa8iNj21RtTFmb5xweKiglxKS+k9Wp0/01g=",
           "keepAlive": 10,
           "wnoise": "quic",
           "wnoisecount": "10-15",
